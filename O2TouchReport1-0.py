@@ -8,10 +8,10 @@ import json
 def process_touch_reports():
     found_files = []  # Define found_files here
 
-    with open(r"C:\Users\vinod\Desktop\touch report project\file_paths.txt", "r") as file:  # input file path
+    with open(r"C:\Users\vinod\Desktop", "r") as file:  # input file path
         file_paths = json.load(file)
 
-    with open(r"C:\Users\vinod\Desktop\o2_touch_report_log_file.txt",'a') as f:  # creating a log file and appending all the data in log.txt file
+    with open(r"C:\Users\vinod\Desktop",'a') as f:  # creating a log file and appending all the data in log.txt file
         for file_name, paths in file_paths.items():
             start_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             f.write("start_time : {0}\n".format(start_time))
